@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Intro JS</title>
+</head>
+<body>
+    <section class="gridmain">
+        <div class="gridmain_item_card">
+            <img class="gridmain_item_card_img" src="./assets/img/xboxx_color.jpeg" alt="Xbox X"/>
+            <p class="gridmain_item_card_texto_producto">Xbox serie X</p> 
+            <input class="gridmain_item_card_cantidad" type="text" name="cantidad" id="cantidad" placeholder="Cantidad" >
+            <select class="gridmain_item_card_selector" id="color" class="selector" >
+                <option selected value="blank">Negro</option>
+                <option value="white">Blanco</option>
+                <option  value="blue">Azul</option>
+                <option value="red">Rojo</option>
+                </select>
+            <p class="gridmain_item_card_texto_precio"> Precio: $400.000</p>
+            <input class="gridmain_item_card_texto_boton" type="button" 
+            onclick="
+                    precio=400000
+                    cantidad = document.querySelector('.gridmain_item_card_cantidad')
+                    color= document.querySelector('.gridmain_item_card_selector')
+
+                    total=document.querySelector('.salida_total_valor')
+                    salidaCantidad= document.querySelector('.salida_cantidad_valor') 
+                    salidaColor= document.querySelector('.color_producto') 
+
+                    total.innerHTML= precio*cantidad.value
+                    salidaCantidad.innerHTML=cantidad.value
+                    salidaColor.style.backgroundColor= color.value
+                    
+                    "
+            value="Comprar" >                    
+        </div>
+        <div class="salida">
+            <p class="salida_total">Total:$ <span id="total" class="salida_total_valor">0</span></p> 
+            <p class="salida_cantidad">Cantidad: <span class="salida_cantidad_valor">0</span> </p>
+            <div class="salida_color">
+            <p>Color : </p><div class="color_producto"></div>
+        </div>
+    </section>
+</body>
+</html>
