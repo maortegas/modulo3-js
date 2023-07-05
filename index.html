@@ -25,20 +25,22 @@
             <p class="gridmain_item_card_texto_precio"> Precio: $400.000</p>
             <input class="gridmain_item_card_texto_boton" type="button" 
             onclick="
-                    precio=400000
-                    cantidad = document.querySelector('.gridmain_item_card_cantidad')
-                    color= document.querySelector('.gridmain_item_card_selector')
+                    const precio=400000
+                    let cantidad = document.querySelector('.gridmain_item_card_cantidad')
+                    let color= document.querySelector('.gridmain_item_card_selector')
 
-                    total=document.querySelector('.salida_total_valor')
-                    salidaCantidad= document.querySelector('.salida_cantidad_valor') 
-                    salidaColor= document.querySelector('.color_producto') 
+                    let salidaTotal=document.querySelector('.salida_total_valor')
+                    let salidaCantidad= document.querySelector('.salida_cantidad_valor') 
+                    let salidaColor= document.querySelector('.color_producto') 
 
-                    total.innerHTML= precio*cantidad.value
+                    let total=precio* cantidad.value
+
+                    salidaTotal.innerHTML= total.toLocaleString()
                     salidaCantidad.innerHTML=cantidad.value
                     salidaColor.style.backgroundColor= color.value
                     
                     "
-            value="Comprar" >                    
+            value="Calcular Total" >                    
         </div>
         <div class="salida">
             <p class="salida_total">Total:$ <span id="total" class="salida_total_valor">0</span></p> 
